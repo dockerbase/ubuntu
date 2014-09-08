@@ -1,5 +1,5 @@
 NAME = dockerbase/ubuntu
-VERSION = 1.0
+VERSION = 1.1
 
 .PHONY: all build test tag_latest release ssh
 
@@ -10,7 +10,10 @@ build:
 
 test:
 	#env NAME=$(NAME) VERSION=$(VERSION) ./test/runner.sh
-	docker run -it --rm $(NAME) echo hello world!
+	docker run -it --rm $(NAME):$(VERSION)  echo hello world!
+
+run:
+	docker run -it --rm $(NAME):$(VERSION) 
 
 tag_latest:
 	docker tag $(NAME):$(VERSION) $(NAME):latest
@@ -20,9 +23,6 @@ release: test tag_latest
 	#@if ! head -n 1 Changelog.md | grep -q 'release date'; then echo 'Please note the release date in Changelog.md.' && false; fi
 	docker push $(NAME)
 	@echo "*** Don't forget to create a tag. git tag rel-$(VERSION) && git push origin rel-$(VERSION)"
-
-run:
-	docker run -it --rm $(NAME)
 
 ssh:
 	chmod 600 image/insecure_key
