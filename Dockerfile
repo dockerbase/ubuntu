@@ -2,8 +2,6 @@
 # DOCKER-VERSION  1.2.0
 # AUTHOR:         Richard Lee <lifuzu@gmail.com>
 # DESCRIPTION:    Ubuntu Image Container
-# TO_BUILD:       $ sudo docker build -rm -t weimed/docker-jenkins .
-# TO_RUN:         $ sudo docker run -p 8080:8080 --name jenkins weimed/docker-jenkins
 
 FROM ubuntu:14.04
 

@@ -6,7 +6,7 @@ VERSION = 1.0
 all: build
 
 build:
-	docker build -t $(NAME):$(VERSION) --rm image
+	docker build -t $(NAME):$(VERSION) --rm .
 
 test:
 	#env NAME=$(NAME) VERSION=$(VERSION) ./test/runner.sh
@@ -20,6 +20,9 @@ release: test tag_latest
 	#@if ! head -n 1 Changelog.md | grep -q 'release date'; then echo 'Please note the release date in Changelog.md.' && false; fi
 	docker push $(NAME)
 	@echo "*** Don't forget to create a tag. git tag rel-$(VERSION) && git push origin rel-$(VERSION)"
+
+run:
+	docker run -it --rm $(NAME)
 
 ssh:
 	chmod 600 image/insecure_key
