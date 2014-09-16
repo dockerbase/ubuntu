@@ -7,8 +7,14 @@ FROM ubuntu:14.04
 
 MAINTAINER Richad Lee "lifuzu@gmail.com"
 
+ENV LANGUAGE en_US.UTF-8
+ENV LANG en_US.UTF-8
 ENV LC_ALL C
 ENV DEBIAN_FRONTEND noninteractive
+
+# Set the locale settings
+RUN     locale-gen en_US.UTF-8
+RUN     dpkg-reconfigure locales
 
 # Enable Ubuntu Universe and Multiverse.
 RUN	sed -i 's/^#\s*\(deb.*universe\)$/\1/g' /etc/apt/sources.list
