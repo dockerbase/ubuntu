@@ -15,8 +15,8 @@ RUN     locale-gen en_US.UTF-8 && \
         dpkg-reconfigure locales
 
 # Run ubuntu script
-ADD     ubuntu.sh .
-RUN     ./ubuntu.sh
+ADD     ubuntu.sh /dockerbase/
+RUN     /dockerbase/ubuntu.sh
 
 # Set environment variables.
 ENV 	HOME /root
