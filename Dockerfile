@@ -1,9 +1,9 @@
-# VERSION 1.2
+# VERSION 1.3
 # DOCKER-VERSION  1.2.0
-# AUTHOR:         Richard Lee <lifuzu@gmail.com>
+# AUTHOR:         Richard Li <lifuzu@gmail.com>
 # DESCRIPTION:    Ubuntu Image Container
 
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 ENV LANGUAGE en_US.UTF-8
 ENV LANG en_US.UTF-8
