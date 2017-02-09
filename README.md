@@ -6,7 +6,7 @@ This repository contains **Dockerbase** of [Ubuntu](http://www.ubuntu.com/) for 
 
 ### Depends on:
 
-* [ubuntu:14.04](https://registry.hub.docker.com/u/library/ubuntu/)
+* [ubuntu:16.04](https://registry.hub.docker.com/u/library/ubuntu/)
 
 
 ### Installation
