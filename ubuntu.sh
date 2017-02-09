@@ -2,6 +2,9 @@
 sed -i 's/^#\s*\(deb.*universe\)$/\1/g' /etc/apt/sources.list
 sed -i 's/^#\s*\(deb.*multiverse\)$/\1/g' /etc/apt/sources.list
 
+# For the latest version of git
+add-apt-repository ppa:git-core/ppa
+
 # Update
 apt-get update
 
