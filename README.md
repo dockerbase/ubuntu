@@ -1,19 +1,19 @@
 ## Docker Base: Ubuntu
 
 
-This repository contains **Dockerbase** of [Ubuntu](http://www.ubuntu.com/) for [Docker](https://www.docker.com/)'s [Dockerbase build](https://registry.hub.docker.com/u/dockerbase/ubuntu/) published on the public [Docker Hub Registry](https://registry.hub.docker.com/).
+This repository contains **Dockerbase** of [Ubuntu](http://www.ubuntu.com/) for [Docker](https://www.docker.com/)'s [Dockerbase build](https://hub.docker.com/u/dockerbase/ubuntu/) published on the public [Docker Hub Registry](https://hub.docker.com/).
 
 
 ### Depends on:
 
-* [ubuntu:16.04](https://registry.hub.docker.com/u/library/ubuntu/)
+* [ubuntu:18.04](https://hub.docker.com/_/ubuntu/)
 
 
 ### Installation
 
 1. Install [Docker](https://docs.docker.com/installation/).
 
-2. Download [Dockerbase build](https://registry.hub.docker.com/u/dockerbase/ubuntu/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull dockerbase/ubuntu`
+2. Download [Dockerbase build](https://hub.docker.com/u/dockerbase/ubuntu/) from public [Docker Hub Registry](https://hub.docker.com/): `docker pull dockerbase/ubuntu`
 
 
 ### Usage

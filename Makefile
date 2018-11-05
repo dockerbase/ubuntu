@@ -1,5 +1,5 @@
 NAME = dockerbase/ubuntu
-VERSION = 1.2
+VERSION = 18.04
 
 .PHONY: all build test tag_latest release ssh
 
@@ -13,7 +13,7 @@ test:
 	docker run -it --rm $(NAME):$(VERSION)  echo hello world!
 
 run:
-	docker run -it --rm $(NAME):$(VERSION) 
+	docker run -it --rm $(NAME):$(VERSION)
 
 tag_latest:
 	docker tag $(NAME):$(VERSION) $(NAME):latest
